@@ -12,6 +12,14 @@ blinker==1.8.2 \
     --hash=sha256:1779309f71bf239144b9399d06ae925637cf6634cf6bd131104184531bf67c01 \
     --hash=sha256:8f77b09d3bf7c795e969e9486f39c2c5e9c39d4ee07424be2bc594ece9642d83
     # via pelican
+build==1.2.1 \
+    --hash=sha256:526263f4870c26f26c433545579475377b2b7588b6f1eac76a001e873ae3e19d \
+    --hash=sha256:75e10f767a433d9a86e50d83f418e83efc18ede923ee5ff7df93b6cb0306c5d4
+    # via pip-tools
+click==8.1.7 \
+    --hash=sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28 \
+    --hash=sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de
+    # via pip-tools
 docutils==0.21.2 \
     --hash=sha256:3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f \
     --hash=sha256:dafca5b9e384f0e419294eb4d2ff9fa826435bf15f15b7bd45723e8ad76811b2
@@ -110,9 +118,23 @@ ordered-set==4.1.0 \
     --hash=sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562 \
     --hash=sha256:694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8
     # via pelican
+packaging==24.0 \
+    --hash=sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5 \
+    --hash=sha256:eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9
+    # via build
 pelican[markdown]==4.9.1 \
     --hash=sha256:713ea66c6a73bde405acd333d5ee746273850a5350a3c0045f2be991d79bd708 \
     --hash=sha256:c08434f0df2a6b649cfe485cbf0d8fdb727ff89ba6ecb1c867f88ceb2f37f179
+    # via
+    #   -r requirements.in
+    #   pelican-webassets
+pelican-webassets==2.0.0 \
+    --hash=sha256:b2a123481177784945e0113e5a79c88f1fc832fb9a2bad6fcc08f6f34ac77a76 \
+    --hash=sha256:d1ef6818534ab742204fc1e35e2d005553c582cb23b170580fb2e2d24deb50f2
+    # via -r requirements.in
+pip-tools==7.4.1 \
+    --hash=sha256:4c690e5fbae2f21e87843e89c26191f0d9454f362d8acdbd695716493ec8b3a9 \
+    --hash=sha256:864826f5073864450e24dbeeb85ce3920cdfb09848a3d69ebf537b521f14bcc9
     # via -r requirements.in
 pygments==2.18.0 \
     --hash=sha256:786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199 \
@@ -120,6 +142,12 @@ pygments==2.18.0 \
     # via
     #   pelican
     #   rich
+pyproject-hooks==1.1.0 \
+    --hash=sha256:4b37730834edbd6bd37f26ece6b44802fb1c1ee2ece0e54ddff8bfc06db86965 \
+    --hash=sha256:7ceeefe9aec63a1064c18d939bdc3adf2d8aa1988a510afec15151578b232aa2
+    # via
+    #   build
+    #   pip-tools
 python-dateutil==2.9.0.post0 \
     --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
     --hash=sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
@@ -140,6 +168,12 @@ sniffio==1.3.1 \
     --hash=sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2 \
     --hash=sha256:f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc
     # via anyio
+tomli==2.0.1 \
+    --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc \
+    --hash=sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f
+    # via
+    #   build
+    #   pip-tools
 typing-extensions==4.12.0 \
     --hash=sha256:8cbcdc8606ebcb0d95453ad7dc5065e6237b6aa230a31e81d0f440c30fed5fd8 \
     --hash=sha256:b349c66bea9016ac22978d800cfff206d5f9816951f12a7d0ec5578b0a819594
@@ -225,3 +259,17 @@ watchfiles==0.22.0 \
     --hash=sha256:f7e1f9c5d1160d03b93fc4b68a0aeb82fe25563e12fbcdc8507f8434ab6f823c \
     --hash=sha256:fe82d13461418ca5e5a808a9e40f79c1879351fcaeddbede094028e74d836e86
     # via pelican
+webassets==2.0 \
+    --hash=sha256:167132337677c8cedc9705090f6d48da3fb262c8e0b2773b29f3352f050181cd \
+    --hash=sha256:a31a55147752ba1b3dc07dee0ad8c8efff274464e08bbdb88c1fd59ffd552724
+    # via pelican-webassets
+wheel==0.43.0 \
+    --hash=sha256:465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85 \
+    --hash=sha256:55c570405f142630c6b9f72fe09d9b67cf1477fcf543ae5b8dcb1f5b7377da81
+    # via pip-tools
+
+# WARNING: The following packages were not pinned, but pip requires them to be
+# pinned when the requirements file includes hashes and the requirement is not
+# satisfied by a package already installed. Consider using the --allow-unsafe flag.
+# pip
+# setuptools

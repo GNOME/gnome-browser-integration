@@ -13,8 +13,9 @@
   {% endif %}
   <link rel="icon" type="image/png" href="{{ SITEURL }}/theme/images/favicon.ico"/>
   <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
-  <link href="{{ SITEURL }}/theme/deneb.5.3.css" rel="stylesheet">
-  <link href="{{ SITEURL }}/theme/style.css" rel="stylesheet">
+  {% assets output="packed.css", "deneb.5.3.css", "style.css" %}
+  <link href="{{ SITEURL }}/{{ ASSET_URL }}" rel="stylesheet"/>
+  {% endassets %}
   <style>
       section {
           padding: 40px 0;
@@ -97,7 +98,9 @@
   </div>
 </div>
 
-<script src="{{ SITEURL }}/theme/deneb.5.3.js"></script>
+{% assets output="js/packed.js", "deneb.5.3.js" %}
+ <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+{% endassets %}
 
 </body>
 </html>
