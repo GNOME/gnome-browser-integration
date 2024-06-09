@@ -1,7 +1,7 @@
 import os
 
 AUTHOR = "Yuri Konotopov <ykonotopov@gnome.org>"
-SITENAME = "GNOME Shell browser integration"
+SITENAME = "GNOME browser integration"
 SITEURL = os.getenv("PELICAN_SITE_URL", "http://localhost:8000")
 
 PATH = "content"
